@@ -29,12 +29,12 @@ function onFormSubmit(event) {
   const {
     elements: { email, message },
   } = event.currentTarget;
-  // console.log({ email: email.value, message: message.value });
+  console.log({ email: email.value, message: message.value });
 
   if (email.value === '' || message.value === '') {
     return alert(`Будь ласка, заповніть всі обов'язкові поля.`);
   }
-
+  console.log(dataForm);
   localStorage.removeItem(STORAGE_KEY);
   event.currentTarget.reset();
   dataForm = {};
